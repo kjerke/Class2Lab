@@ -20,7 +20,7 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name = "PageGenerator", urlPatterns = {"/pager"})
 public class PageGenerator extends HttpServlet {
 
-    private static final int NUM_ROWS_TABLE = 12;
+    private static final int NUM_ROWS_TABLE = 10;
     private static final int NUM_COLUMNS_TABLE = 5;
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -39,14 +39,15 @@ public class PageGenerator extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet PageGenerator</title>");  
+            out.println("<title>Sample Page Generator</title>");
             out.println("<link rel=\"stylesheet\" "
-            + "type=\"text/css\" href=\"indexStyleSheet.css\">");
+                    + "type=\"text/css\" href=\"indexStyleSheet.css\">");
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet PageGenerator at " + request.getContextPath() + "</h1>");
-            out.println("table border='5'>");
-             for(int j =1 ; j < NUM_COLUMNS_TABLE+1; j++){
+            out.println("<h3>Sample Servlet PageGenerator at " + 
+                    request.getContextPath() + "</h3>");
+            out.println("<table border='5'>");
+            for(int j =1 ; j < NUM_COLUMNS_TABLE+1; j++){
                     out.println("<th > heading " + j);
                     out.println("</th>");
                 }
@@ -59,10 +60,12 @@ public class PageGenerator extends HttpServlet {
                 out.println("</tr>");
             }
             out.println("</table>");
-            
-            
+            out.println("<br>");
+            out.println("<a href=\"index.jsp\"> Back to Home </a>");
             out.println("</body>");
             out.println("</html>");
+        }catch(Exception e ){
+            request.setAttribute("errMsg", e.getMessage());
         }
     }
 

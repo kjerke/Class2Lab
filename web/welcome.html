@@ -6,11 +6,20 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Welcome</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <div>TODO write content</div>
+        <h1>
+            Welcome Form
+        </h1>
+        <form id="welcomeForm" name="welcomeForm" method="POST" action="greeter">
+              <label>
+              Please enter your name: 
+              </label>
+            <input type="text" name="myName" value="">
+            <input type="submit" name= "submit" value="Submit"> 
+        </form>
+        <a href="index.jsp">Back to Home</a>
     </body>
 </html>

@@ -11,7 +11,7 @@ and open the template in the editor.
 
 body{
     text-align: center;
-    font-family: Impact, Black, sans-serif;
+    font-family: Black, sans-serif;
     background-color:   #D3D3D3
 }
 h1 {
@@ -20,5 +20,6 @@ h1 {
 
 table{
     margin: auto;
-    font-size: 2em;
+    font-size: 1em;
+    background-color: orange
 }
