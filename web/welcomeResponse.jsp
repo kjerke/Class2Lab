@@ -1,6 +1,6 @@
 <%-- 
-    Document   : index
-    Created on : Aug 31, 2017, 9:18:42 PM
+    Document   : welcomeResponse
+    Created on : Sep 5, 2017, 4:34:53 PM
     Author     : kevinjerke
 --%>
 
@@ -13,9 +13,5 @@
     </head>
     <body>
         <h1>Hello World!</h1>
-        <%
-            
-            
-            %>
     </body>
 </html>
